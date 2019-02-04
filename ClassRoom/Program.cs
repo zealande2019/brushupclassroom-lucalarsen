@@ -21,6 +21,13 @@ namespace ClassRoom
             klasseRum.KlasseListe.Add(student1);
             klasseRum.KlasseListe.Add(student2);
             klasseRum.KlasseListe.Add(student3);
+
+            foreach (var item in klasseRum.KlasseListe)
+            {
+                Console.WriteLine(item.Navn);
+                Console.WriteLine(item.Årstid());
+            }
+            Console.ReadLine();
         }
     }
 }

@@ -18,5 +18,25 @@ namespace ClassRoom
             Fødselsdag = fødselsdag;
             Fødselsmåned = fødselsmåned;
         }
+        public string Årstid()
+        {
+            if (Fødselsmåned == 12 || Fødselsmåned == 1 || Fødselsmåned == 2)
+            {
+                return "Vinter";
+            }
+            if (Fødselsmåned == 3 || Fødselsmåned == 4 || Fødselsmåned == 5)
+            {
+                return "Forår";
+            }
+            if (Fødselsmåned == 6 || Fødselsmåned == 7 || Fødselsmåned == 8)
+            {
+                return "Sommer";
+            }
+            if (Fødselsmåned == 9 || Fødselsmåned == 10 || Fødselsmåned == 11)
+            {
+                return "Vinter";
+            }
+            return null;
+        }
     }
 }
