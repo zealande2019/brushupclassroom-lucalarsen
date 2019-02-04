@@ -10,7 +10,7 @@ namespace ClassRoom
     {
         public string KlasseNavn { get; set; }
 
-        List<Studerende> Klasseliste = new List<Studerende>();
+        public List<Studerende> KlasseListe { get; set; }
 
         public DateTime SemesterStart { get; set; }
 
