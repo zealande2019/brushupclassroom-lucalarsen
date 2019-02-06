@@ -34,7 +34,7 @@ namespace ClassRoom
             }
             if (Fødselsmåned == 9 || Fødselsmåned == 10 || Fødselsmåned == 11)
             {
-                return "Vinter";
+                return "efterår";
             }
             return null;
         }

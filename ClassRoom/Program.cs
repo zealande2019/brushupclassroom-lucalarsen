@@ -27,12 +27,35 @@ namespace ClassRoom
                 Console.WriteLine(item.Navn);
                 Console.WriteLine(item.Årstid());
             }
+
+
+            optælling("sommer", klasseRum);
+            optælling("vinter", klasseRum);
+            optælling("forår", klasseRum);
+            optælling("efterår", klasseRum);
+
             Console.ReadLine();
         }
-        static void optælling()
+        static void optælling(string sæson, KlasseRum klasseRum)
         {
             int count = 0;
-            
+            if (sæson == "sommer")
+            {
+                count = klasseRum.KlasseListe.Where(x => x.Fødselsmåned == 6 || x.Fødselsmåned == 7 || x.Fødselsmåned == 8).Count();
+            }
+            if (sæson == "forår")
+            {
+                count = klasseRum.KlasseListe.Where(x => x.Fødselsmåned == 3 || x.Fødselsmåned == 4 || x.Fødselsmåned == 5).Count();
+            }
+            if (sæson == "vinter")
+            {
+                count = klasseRum.KlasseListe.Where(x => x.Fødselsmåned == 12 || x.Fødselsmåned == 1 || x.Fødselsmåned == 2).Count();
+            }
+            if (sæson == "efterår")
+            {
+                count = klasseRum.KlasseListe.Where(x => x.Fødselsmåned == 9 || x.Fødselsmåned == 10 || x.Fødselsmåned == 11).Count();
+            }
+            Console.WriteLine($"{count} ");
         }
     }
 }
