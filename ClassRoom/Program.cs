@@ -29,5 +29,10 @@ namespace ClassRoom
             }
             Console.ReadLine();
         }
+        static void optælling()
+        {
+            int count = 0;
+            
+        }
     }
 }
